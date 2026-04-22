@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const x = i * fontSize;
       const y = drops[i] * fontSize;
 
-      if (Math.random() > 0.97) {
+      if (Math.random() > 0.96) {
         ctx.fillStyle = '#ffffff';
       } else {
-        const alpha = Math.random() * 0.6 + 0.25;
-        ctx.fillStyle = 'rgba(16, 185, 129, ' + alpha + ')';
+        const alpha = Math.random() * 0.5 + 0.5;
+        ctx.fillStyle = 'rgba(52, 211, 153, ' + alpha + ')';
       }
 
       ctx.fillText(char, x, y);
