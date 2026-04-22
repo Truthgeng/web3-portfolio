@@ -1,16 +1,16 @@
 /* ===== DESIGN TOKENS (Sharp Matrix Theme) ===== */
 :root {
-  --bg-primary: #030303;
-  --bg-secondary: #0a0a0a;
-  --bg-tertiary: #111111;
+  --bg-primary: #050505;
+  --bg-secondary: #0c0c0c;
+  --bg-tertiary: #141414;
   --border-color: #222222;
-  --border-hover: #00ff41;
+  --border-hover: #10b981;
   --text-primary: #f0f0f0;
   --text-secondary: #a0a0a0;
   --text-muted: #555555;
-  --accent: #00ff41; /* Sharp Matrix Green */
-  --accent-hover: #00e63b;
-  --accent-glow: rgba(0, 255, 65, 0.15);
+  --accent: #10b981; /* Toned-down Emerald Green */
+  --accent-hover: #34d399;
+  --accent-glow: rgba(16, 185, 129, 0.15);
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-heading: 'Playfair Display', Georgia, serif;
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -74,7 +74,7 @@ body::before {
   transform: translateX(-50%);
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle at 50% 0%, rgba(0, 255, 65, 0.04) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.04) 0%, transparent 60%);
   z-index: -1;
   pointer-events: none;
 }
@@ -339,6 +339,26 @@ section { padding: 7rem 0; position: relative; z-index: 1; }
 }
 
 .section-header { margin-bottom: 4rem; text-align: left; }
+
+.header-with-pfp {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  object-fit: cover;
+  box-shadow: 0 0 20px var(--accent-glow);
+  transition: transform 0.4s var(--ease-spring);
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05) rotate(-5deg);
+}
 
 .section-title { font-size: 2.5rem; margin-bottom: 1rem; }
 

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillStyle = '#ffffff';
       } else {
         const alpha = Math.random() * 0.6 + 0.25;
-        ctx.fillStyle = 'rgba(0, 255, 65, ' + alpha + ')';
+        ctx.fillStyle = 'rgba(16, 185, 129, ' + alpha + ')';
       }
 
       ctx.fillText(char, x, y);
@@ -72,13 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- Pen clip -->
         <rect x="15.5" y="2" width="1.5" height="14" rx="0.5" fill="#111111"/>
         <!-- Pen grip section -->
-        <rect x="11" y="16" width="8" height="4" rx="1" fill="#00ff41"/>
+        <rect x="11" y="16" width="8" height="4" rx="1" fill="#10b981"/>
         <!-- Pen tip housing -->
         <polygon points="11,20 19,20 16,27" fill="#333333"/>
         <!-- Pen nib tip (the writing point) -->
-        <circle cx="15" cy="27.5" r="1.2" fill="#00ff41"/>
+        <circle cx="15" cy="27.5" r="1.2" fill="#10b981"/>
         <!-- Pen top button -->
-        <rect x="12.5" y="1" width="5" height="2.5" rx="1.2" fill="#00ff41"/>
+        <rect x="12.5" y="1" width="5" height="2.5" rx="1.2" fill="#10b981"/>
       </svg>
     `;
     document.body.appendChild(cursorEl);
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorEl.querySelector('circle').setAttribute('fill', '#ffffff');
       });
       el.addEventListener('mouseleave', () => {
-        cursorEl.querySelector('circle').setAttribute('fill', '#00ff41');
+        cursorEl.querySelector('circle').setAttribute('fill', '#10b981');
       });
     });
 
