@@ -203,10 +203,22 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.innerHTML = 'Sending...';
       submitBtn.style.opacity = '0.7';
       submitBtn.disabled = true;
-      setTimeout(() => {
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData);
+
+      fetch('https://formsubmit.co/ajax/truth7824@gmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
         submitBtn.innerHTML = 'Message Sent ✓';
-        submitBtn.style.background = '#2d6a4f';
-        submitBtn.style.color = '#fff';
+        submitBtn.style.background = '#10b981';
+        submitBtn.style.color = '#050505';
         submitBtn.style.opacity = '1';
         contactForm.reset();
         setTimeout(() => {
@@ -215,7 +227,20 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.style.color = '';
           submitBtn.disabled = false;
         }, 3000);
-      }, 1500);
+      })
+      .catch(error => {
+        console.error(error);
+        submitBtn.innerHTML = 'Error Sending ✕';
+        submitBtn.style.background = '#d90429';
+        submitBtn.style.color = '#fff';
+        submitBtn.style.opacity = '1';
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.style.background = '';
+          submitBtn.style.color = '';
+          submitBtn.disabled = false;
+        }, 3000);
+      });
     });
   }
 });
