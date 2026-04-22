@@ -79,6 +79,38 @@ body::before {
   pointer-events: none;
 }
 
+/* ===== PRELOADER ===== */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.matrix-loader {
+  font-family: monospace;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent);
+  letter-spacing: 4px;
+}
+
+.matrix-loader::after {
+  content: '█';
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
 /* Matrix Rain Canvas */
 #matrixCanvas {
   position: fixed;
