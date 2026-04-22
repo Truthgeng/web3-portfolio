@@ -238,6 +238,12 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   padding-top: 5rem;
   position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center;
+  animation: panGrid 40s linear infinite;
 }
 
 .hero-content { max-width: 800px; }
@@ -334,8 +340,19 @@ section { padding: 7rem 0; position: relative; z-index: 1; }
 
 .section-alt {
   background-color: var(--bg-secondary);
+  background-image: linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center;
+  animation: panGrid 40s linear infinite;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+@keyframes panGrid {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
 }
 
 .section-header { margin-bottom: 4rem; text-align: left; }
