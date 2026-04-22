@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const y = drops[i] * fontSize;
 
       if (Math.random() > 0.97) {
-        ctx.fillStyle = '#fffde7';
+        ctx.fillStyle = '#ffffff';
       } else {
         const alpha = Math.random() * 0.6 + 0.25;
-        ctx.fillStyle = 'rgba(212, 175, 55, ' + alpha + ')';
+        ctx.fillStyle = 'rgba(0, 255, 65, ' + alpha + ')';
       }
 
       ctx.fillText(char, x, y);
@@ -57,17 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
     cursorEl.innerHTML = `
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
         <!-- Pen body -->
-        <rect x="12" y="2" width="6" height="16" rx="2" fill="#d4af37"/>
+        <rect x="12" y="2" width="6" height="16" rx="2" fill="#222222"/>
         <!-- Pen clip -->
-        <rect x="15.5" y="2" width="1.5" height="14" rx="0.5" fill="#a07d20"/>
+        <rect x="15.5" y="2" width="1.5" height="14" rx="0.5" fill="#111111"/>
         <!-- Pen grip section -->
-        <rect x="11" y="16" width="8" height="4" rx="1" fill="#b8922a"/>
+        <rect x="11" y="16" width="8" height="4" rx="1" fill="#00ff41"/>
         <!-- Pen tip housing -->
-        <polygon points="11,20 19,20 16,27" fill="#c4a035"/>
+        <polygon points="11,20 19,20 16,27" fill="#333333"/>
         <!-- Pen nib tip (the writing point) -->
-        <circle cx="15" cy="27.5" r="1.2" fill="#f0f0f0"/>
+        <circle cx="15" cy="27.5" r="1.2" fill="#00ff41"/>
         <!-- Pen top button -->
-        <rect x="12.5" y="1" width="5" height="2.5" rx="1.2" fill="#f0c040"/>
+        <rect x="12.5" y="1" width="5" height="2.5" rx="1.2" fill="#00ff41"/>
       </svg>
     `;
     document.body.appendChild(cursorEl);
@@ -106,10 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
       el.style.cursor = 'none';
       el.addEventListener('mouseenter', () => {
         cursorEl.style.transform += ' scale(1.25)';
-        cursorEl.querySelector('circle').setAttribute('fill', '#d4af37');
+        cursorEl.querySelector('circle').setAttribute('fill', '#ffffff');
       });
       el.addEventListener('mouseleave', () => {
-        cursorEl.querySelector('circle').setAttribute('fill', '#f0f0f0');
+        cursorEl.querySelector('circle').setAttribute('fill', '#00ff41');
       });
     });
 

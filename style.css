@@ -1,16 +1,16 @@
-/* ===== DESIGN TOKENS (Elegant Dark + Animations) ===== */
+/* ===== DESIGN TOKENS (Sharp Matrix Theme) ===== */
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #121212;
-  --bg-tertiary: #1a1a1a;
-  --border-color: #2a2a2a;
-  --border-hover: #4a4a4a;
-  --text-primary: #f5f5f5;
-  --text-secondary: #a3a3a3;
-  --text-muted: #666666;
-  --accent: #d4af37; /* Refined Gold */
-  --accent-hover: #f1c40f;
-  --accent-glow: rgba(212, 175, 55, 0.15);
+  --bg-primary: #030303;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #111111;
+  --border-color: #222222;
+  --border-hover: #00ff41;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0a0;
+  --text-muted: #555555;
+  --accent: #00ff41; /* Sharp Matrix Green */
+  --accent-hover: #00e63b;
+  --accent-glow: rgba(0, 255, 65, 0.15);
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-heading: 'Playfair Display', Georgia, serif;
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -74,7 +74,7 @@ body::before {
   transform: translateX(-50%);
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 0%, rgba(0, 255, 65, 0.04) 0%, transparent 60%);
   z-index: -1;
   pointer-events: none;
 }
