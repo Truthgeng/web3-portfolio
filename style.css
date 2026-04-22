@@ -917,7 +917,7 @@ section { padding: 7rem 0; position: relative; z-index: 1; }
   -webkit-text-stroke: 1.5px var(--text-muted);
   text-transform: uppercase;
   transition: all 0.3s var(--ease);
-  cursor: default;
+  cursor: none;
 }
 
 .marquee-content span:hover {

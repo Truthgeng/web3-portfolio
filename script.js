@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCursor();
 
     // Scale pen on clickable elements
-    const clickables = document.querySelectorAll('a, button, input, textarea, [role="button"]');
+    const clickables = document.querySelectorAll('a, button, input, textarea, [role="button"], .marquee-content span');
     clickables.forEach(el => {
       el.style.cursor = 'none';
       el.addEventListener('mouseenter', () => {
