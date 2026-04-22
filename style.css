@@ -780,22 +780,45 @@ section { padding: 7rem 0; position: relative; z-index: 1; }
 
 .footer-links a:hover { color: var(--accent); }
 
-/* ===== SCROLL REVEAL ===== */
+/* ===== ADVANCED SCROLL REVEAL ===== */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s var(--ease-spring);
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease-spring);
+  will-change: opacity, transform;
 }
-
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s var(--ease-spring);
+  will-change: opacity, transform;
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s var(--ease-spring);
+  will-change: opacity, transform;
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Delay modifiers for staggered reveals */
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
