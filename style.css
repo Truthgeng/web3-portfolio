@@ -569,16 +569,31 @@ section { padding: 7rem 0; position: relative; z-index: 1; }
   font-weight: 300;
 }
 
-.contact-details p {
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
+.contact-socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-.contact-details strong {
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
   color: var(--text-primary);
-  font-weight: 500;
-  margin-right: 0.5rem;
+  transition: all 0.3s var(--ease);
+}
+
+.social-icon:hover {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--accent-glow);
 }
 
 .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
